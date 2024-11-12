@@ -139,7 +139,15 @@ const experiences: ExperienceItem[] = [
 ];
 
 const Experience: React.FC = () => {
-  const [expandedRoles, setExpandedRoles] = React.useState<{[key: string]: boolean}>({});
+  const [expandedRoles, setExpandedRoles] = React.useState<{[key: string]: boolean}>(() => {
+    const initialState: {[key: string]: boolean} = {};
+    experiences.forEach((exp, companyIndex) => {
+      exp.roles.forEach((_, roleIndex) => {
+        initialState[`${companyIndex}-${roleIndex}`] = true;
+      });
+    });
+    return initialState;
+  });
 
   const toggleRole = (companyIndex: number, roleIndex: number) => {
     const key = `${companyIndex}-${roleIndex}`;
