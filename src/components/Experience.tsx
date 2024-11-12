@@ -23,7 +23,7 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     company: "PARADES",
-    logo: "/images/paradessquare.png",
+    logo: `${process.env.PUBLIC_URL}/images/paradessquare.png`,
     roles: [
       {
         title: "SOFTWARE ENGINEER",
@@ -60,7 +60,7 @@ const experiences: ExperienceItem[] = [
   },
   {
     company: "ACCENTURE",
-    logo: "/images/accenture.png",
+    logo: `${process.env.PUBLIC_URL}/images/accenture.png`,
     roles: [
       {
         title: "BLOCKCHAIN METAVERSE REACT SOFTWARE ENGINEER",
