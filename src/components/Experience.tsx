@@ -67,27 +67,72 @@ const experiences: ExperienceItem[] = [
         date: "OCT 2022 - DEC 2023",
         location: "REMOTE",
         details: [
-          "Incubated new business value in Blockchain and Metaverse"
+          "Incubated new business value in Blockchain and Metaverse, focusing on innovative technologies, multiparty systems, and extended reality"
         ],
         projects: [
           {
             title: "GEN AI 3D GRAPHICS BOT CHAT APPLICATION",
             description: [
               "Developed a web application combining AI chat and advanced graphics using React and Three.js",
-              "Implemented WebGL for 3D rendering, scene management, and custom shaders"
+              "Implemented WebGL for 3D rendering, scene management, and custom shaders for graphical effects"
             ],
-            technologies: ["Microsoft Azure", "Astro", "Three.js", "Tailwind", "Blender", "TypeScript"]
+            technologies: ["Microsoft Azure", "Astro", "Three.js", "Tailwind", "Blender", "TypeScript", "JavaScript", "Nanostores", "Canvas API"]
           },
           {
             title: "AI PROMPTS BLOCKCHAIN BOT",
             description: [
-              "Developed an AI-powered bot to streamline purchase orders for logistics and accounting",
-              "Integrated blockchain for secure, transparent transactions"
+              "Developed an AI-powered bot to streamline purchase orders for logistics and accounting, integrating blockchain for secure, transparent transactions"
             ],
-            technologies: ["React", "Azure", "Power Automate", "Swagger", "Ethereum"]
+            technologies: ["React", "Azure", "Power Automate", "Swagger", "Arrow API", "Azure Active Directory", "Ethereum"]
+          },
+          {
+            title: "CRYPTOPLATETRACKR HYPERLEDGER TECHNOLOGIES",
+            description: [
+              "Developed a blockchain-based license plate tracking system for the Illinois Tollway, ensuring efficient, secure, and transparent vehicle tracking and payments across state borders"
+            ],
+            technologies: ["Hyperledger Fabric", "Firefly", "Besu", "Indy", "GoQuorum", "Polygon", "Edge", "Kaleido"]
+          },
+          {
+            title: "COMCAST COOKIE CONSENT",
+            description: [
+              "Centralized client credentials for 96 backend services by updating config files",
+              "Automated credential identification and updates with Python scripts",
+              "Re-deployed services after consolidating credentials for backend integration"
+            ],
+            technologies: ["JavaScript", "HTML", "Python", "Securiti"]
+          },
+          {
+            title: "TOKEN GATING DISCORD BOT API",
+            description: [
+              "Developed a Discord bot to control server access for token holders",
+              "Bot interfaces with smart contracts to verify token holdings upon user registration",
+              "Token data is stored in a database via a serverless API, updated through a Moralis webhook"
+            ],
+            technologies: ["Solidity", "ReactJS", "Amazon S3", "Discord API", "Web3", "Serverless", "ThirdWeb", "EthersJS", "Moralis", "Docker", "ERC-4337", "Account Abstraction"]
+          },
+          {
+            title: "METAVERSE COOKIE NETWORK",
+            description: [
+              "Blockchain Cookie traceability ownership interactivity provides analytics for non-fungible tokens interactions",
+              "Video game ecosystem networking in Unity gaming usage patterns"
+            ],
+            technologies: ["ReactTS", "Metaverse", "Solidity", "Unity", "Hardhat", "TypeScript"]
           }
         ],
-        skills: ["React", "Three.js", "Blockchain", "WebGL", "TypeScript", "Solidity"]
+        skills: [
+          "React",
+          "TypeScript",
+          "Blockchain",
+          "Solidity",
+          "Three.js",
+          "WebGL",
+          "Azure",
+          "Unity",
+          "Python",
+          "Web3",
+          "Smart Contracts",
+          "Hyperledger"
+        ]
       }
     ]
   }
