@@ -1,31 +1,30 @@
+// src/components/Projects.tsx
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
-interface Project {
-  title: string;
-  date: string;
-  description: string;
-  technologies: string[];
-  livePreview?: string;
-}
-
 const Projects: React.FC = () => {
-  const projects: Project[] = [
+  const projects = [
     {
-      title: "CryptoGene",
-      date: "Mar 2020 - Dec 2020",
-      description: "DApp/Web3JS application that converts raw DNA data from Ancestry.com into raymarching shader art, transformed into Ethereum-based NFTs.",
-      technologies: ["React", "Web3.js", "Solidity", "GLSL", "Firebase"],
-      livePreview: "https://your-project-url.com"
+      title: 'CryptoGene',
+      date: 'Mar 2020 - Dec 2020',
+      description: 'DApp/Web3JS application that converts raw DNA data from Ancestry.com into Ethereum-based NFTs.',
+      technologies: ['React', 'Web3.js', 'Solidity', 'GLSL', 'Firebase'],
+      livePreview: 'https://your-project-url.com',
     },
-    // Add more projects here
+    {
+      title: 'Shader Park',
+      date: 'Sept 2019 - Feb 2020',
+      description: 'Resolved front-end issues and developed shaders using GLSL.',
+      technologies: ['VueJS', 'GLSL'],
+    },
+    // Add more projects as needed
   ];
 
   return (
-    <div className="p-8">
+    <div>
       <h2 className="text-3xl font-bold mb-6">Projects</h2>
       <div className="space-y-6">
-        {projects.map((project) => (
+        {projects.map(project => (
           <ProjectCard key={project.title} project={project} />
         ))}
       </div>

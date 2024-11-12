@@ -1,16 +1,21 @@
+// src/components/MainComponent.tsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Overview from './Overview';
+import Experience from './Experience';
+import Skills from './Skills';
 import Projects from './Projects';
+import Education from './Education';
 
 const MainComponent: React.FC = () => {
   return (
-    <main className="flex-1 overflow-y-auto">
+    <main className="flex-1 p-8 overflow-y-auto">
       <Routes>
-        <Route path="/" element={<div>Overview</div>} />
-        <Route path="/experience" element={<div>Experience</div>} />
-        <Route path="/skills" element={<div>Skills</div>} />
+        <Route path="/" element={<Overview />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/education" element={<div>Education</div>} />
+        <Route path="/education" element={<Education />} />
       </Routes>
     </main>
   );
