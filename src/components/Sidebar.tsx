@@ -1,19 +1,30 @@
 // path: src/components/Sidebar.tsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { 
+  HomeIcon, 
+  BriefcaseIcon,
+  WrenchIcon,
+  FolderIcon,
+  AcademicCapIcon,
+  PhoneIcon,
+  EnvelopeIcon
+} from '@heroicons/react/24/outline';
+
 
 interface NavItem {
   name: string;
   path: string;
+  icon: React.ElementType;
 }
 
 const Sidebar: React.FC = () => {
   const navItems: NavItem[] = [
-    { name: 'Overview', path: '/'},
-    { name: 'Experience', path: '/experience' },
-    { name: 'Skills', path: '/skills' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Education', path: '/education' },
+    { name: 'Overview', path: '/', icon: HomeIcon },
+    { name: 'Experience', path: '/experience', icon: BriefcaseIcon },
+    { name: 'Skills', path: '/skills', icon: WrenchIcon },
+    { name: 'Projects', path: '/projects', icon: FolderIcon },
+    { name: 'Education', path: '/education', icon: AcademicCapIcon },
   ];
 
   return (
@@ -57,9 +68,15 @@ const Sidebar: React.FC = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="text-sm text-gray-600 mb-6">
-          <p className="mb-1">📞 206.947.6991</p>
-          <p>✉️ mollyjbeach@gmail.com</p>
+        <div className="text-sm text-gray-600 mb-6 space-y-2">
+          <div className="flex items-center justify-center gap-2">
+            <PhoneIcon className="h-4 w-4" />
+            <p>206.947.6991</p>
+          </div>
+          <div className="flex items-center justify-center gap-2">
+            <EnvelopeIcon className="h-4 w-4" />
+            <p>mollyjbeach@gmail.com</p>
+          </div>
         </div>
       </div>
 
@@ -77,6 +94,7 @@ const Sidebar: React.FC = () => {
               }`
             }
           >
+           {/*} <item.icon className="h-5 w-5" />*/}
             {item.name}
           </NavLink>
         ))}
