@@ -1,4 +1,4 @@
-// src/components/MainComponent.tsx
+// path: src/components/MainComponent.tsx
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Overview from './Overview';
@@ -9,7 +9,7 @@ import Education from './Education';
 
 const MainComponent: React.FC = () => {
   return (
-    <main className="flex-1 p-8 overflow-y-auto">
+    <main className="flex-1 overflow-auto p-8 bg-white">
       <Routes>
         <Route path="/" element={<Overview />} />
         <Route path="/experience" element={<Experience />} />

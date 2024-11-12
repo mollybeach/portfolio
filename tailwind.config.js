@@ -10,7 +10,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        graphik: ['Graphik', 'sans'], // Define your custom font family here
+        sans: ['ui-monospace', 'SFMono-Regular', 'monospace'],
       },
     },
     screens: {
@@ -22,19 +22,19 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: ({ colors }) => ({
-      inherit: colors.inherit,
-      current: colors.current,
-      transparent: colors.transparent,
-      primary: colors.purple,
-      secondary: colors.pink,
-      info: "#0C63E7",
-      black: colors.black,
-      white: colors.white,
-      slate: colors.slate,
-      'primary-purple':'#A055F5',
-      'primary-white':"#FFFFFF",
-      'secondary-light-purple':'#F4E5FF',
-      'accent-light-purple': '#F3EFFD',
+      border: "hsl(var(--border))",
+      input: "hsl(var(--input))",
+      background: "hsl(var(--background))",
+      foreground: "hsl(var(--foreground))",
+      secondary: {
+        DEFAULT: "hsl(var(--secondary))",
+        foreground: "hsl(var(--secondary-foreground))",
+      },
+      accent: {
+        DEFAULT: "hsl(var(--accent))",
+        foreground: "hsl(var(--accent-foreground))",
+      },
+      ring: "hsl(var(--ring))",
       gray: {
         50: "#FAFAFC",
         100: "#E9E9EC",
@@ -63,7 +63,7 @@ module.exports = {
       blue: colors.blue,
       purple: colors.purple,
       violet: colors.violet,
-      purple: colors.purple,
+
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
@@ -241,13 +241,13 @@ module.exports = {
       8: '8px',
     },
     boxShadow: {
-      sm: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
-      DEFAULT: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
-      md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
-      lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
-      xl: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
-      '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
-      inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+      sm: '0 1px 2px rgba(0,0,0,0.05)',
+      DEFAULT: '0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1)',
+      md: '0 4px 6px rgba(0,0,0,0.1)',
+      lg: '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)',
+      xl: '0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1)',
+      '2xl': '0 25px 50px -12px rgba(0,0,0,0.25)',
+      inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.05)',
       none: 'none',
     },
     boxShadowColor: ({ theme }) => theme('colors'),

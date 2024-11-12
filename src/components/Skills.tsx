@@ -1,24 +1,28 @@
-// src/components/Skills.tsx
+// path: src/components/Skills.tsx
 import React from 'react';
 
 const skills = [
-  'TypeScript', 'JavaScript', 'Solidity', 'React', 'NodeJS', 'Vue', 'SQL', 'Python', 
-  'Swift', 'Scala', 'Java', 'Rust', 'Ruby', 'C++', 'R', 'Docker', 'HTML/CSS/SCSS', 
-  'GraphQL', 'GCP', 'HTML5', 'Django', 'Git', 'MySQL', 'PostgreSQL', 'AWS', 'Firebase', 
-  'Azure', 'GoLang', 'GLSL', 'Canvas API', 'Hardhat', 'Truffle', 'Jest', 'Mocha', 'Remix'
+  'TypeScript', 'JavaScript', 'Solidity', 'React', 'Node.js', 'SQL', 'Python', 
+  'Swift', 'Scala', 'Java', 'Rust', 'Docker', 'HTML', 'CSS', 'SCSS', 'GraphQL',
+  'AWS', 'Azure', 'Firebase', 'GCP', 'Jest', 'Mocha', 'Remix'
 ];
 
-const Skills: React.FC = () => (
-  <div>
-    <h2 className="text-3xl font-bold mb-6">Skills</h2>
-    <div className="grid grid-cols-3 gap-4">
-      {skills.map(skill => (
-        <span key={skill} className="px-3 py-1 bg-gray-200 rounded text-sm">
-          {skill}
-        </span>
-      ))}
-    </div>
-  </div>
-);
+const Skills: React.FC = () => {
+  return (
+    <section className="space-y-4">
+      <h2 className="text-3xl font-semibold text-gray-900">Skills</h2>
+      <div className="flex flex-wrap gap-2">
+        {skills.map(skill => (
+          <span
+            key={skill}
+            className="px-3 py-1 bg-gray-200 rounded-full text-sm text-gray-700"
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default Skills;

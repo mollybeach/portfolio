@@ -1,34 +1,39 @@
-// src/components/Projects.tsx
+// path: src/components/Projects.tsx
 import React from 'react';
-import ProjectCard from './ProjectCard';
+
+const projects = [
+  {
+    title: "CryptoGene",
+    date: "Mar 2020 - Dec 2020",
+    description: "DApp/Web3JS app converting DNA data from Ancestry.com into NFTs.",
+    technologies: ["React", "Web3.js", "Solidity", "GLSL", "Firebase"],
+    link: "https://chromagenetic.firebaseapp.com"
+  },
+  // Add more projects similarly
+];
 
 const Projects: React.FC = () => {
-  const projects = [
-    {
-      title: 'CryptoGene',
-      date: 'Mar 2020 - Dec 2020',
-      description: 'DApp/Web3JS application that converts raw DNA data from Ancestry.com into Ethereum-based NFTs.',
-      technologies: ['React', 'Web3.js', 'Solidity', 'GLSL', 'Firebase'],
-      livePreview: 'https://your-project-url.com',
-    },
-    {
-      title: 'Shader Park',
-      date: 'Sept 2019 - Feb 2020',
-      description: 'Resolved front-end issues and developed shaders using GLSL.',
-      technologies: ['VueJS', 'GLSL'],
-    },
-    // Add more projects as needed
-  ];
-
   return (
-    <div>
-      <h2 className="text-3xl font-bold mb-6">Projects</h2>
-      <div className="space-y-6">
-        {projects.map(project => (
-          <ProjectCard key={project.title} project={project} />
-        ))}
-      </div>
-    </div>
+    <section className="space-y-6">
+      <h2 className="text-3xl font-semibold text-gray-900">Projects</h2>
+      {projects.map((project) => (
+        <div key={project.title} className="bg-gray-50 p-6 rounded-lg shadow">
+          <h3 className="text-xl font-bold text-gray-800">{project.title}</h3>
+          <p className="text-sm text-gray-600">{project.date}</p>
+          <p className="text-gray-700">{project.description}</p>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {project.technologies.map((tech) => (
+              <span key={tech} className="px-3 py-1 bg-gray-200 rounded-full text-sm text-gray-700">
+                {tech}
+              </span>
+            ))}
+          </div>
+          {project.link && (
+            <a href={project.link} className="text-blue-600 hover:underline mt-2 block">Live Preview</a>
+          )}
+        </div>
+      ))}
+    </section>
   );
 };
 
