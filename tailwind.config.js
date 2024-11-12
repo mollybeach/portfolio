@@ -161,6 +161,7 @@ module.exports = {
       'secondary-light-purple':'#F4E5FF',
       'secondary-light-purple-darker': '#c990f3',
       'accent-light-purple': '#D3C1E5',
+      'raspberry': '#e30b5d'
    }),
     backgroundImage: {
       none: 'none',

@@ -75,6 +75,24 @@ portfolio/
 ├── .git/
 ├── node_modules/
 ├── public/
+│   ├── images/
+│   │   ├── accenture.png
+│   │   ├── bordercollie.png
+│   │   ├── brainstationicon.png
+│   │   ├── cardswappersquare.png
+│   │   ├── cowpic.png
+│   │   ├── cryptogeneicon copy.png
+│   │   ├── cryptogeneicon.png
+│   │   ├── githubsquare.png
+│   │   ├── income-solution.png
+│   │   ├── linkedinsquare.png
+│   │   ├── magicicon.png
+│   │   ├── mailsquare.png
+│   │   ├── paradessquare.png
+│   │   ├── shader-in.png
+│   │   ├── shader-linkedin.jpeg
+│   │   ├── shaderparksquare.png
+│   │   └── uwcrestsquare.png
 │   ├── favicon.ico
 │   ├── index.html
 │   ├── logo192.png
@@ -82,16 +100,20 @@ portfolio/
 │   ├── manifest.json
 │   └── robots.txt
 ├── src/
-│   ├── Components/
+│   ├── components/
+│   │   ├── Education.tsx
+│   │   ├── Experience.tsx
 │   │   ├── MainComponent.tsx
+│   │   ├── Overview.tsx
 │   │   ├── ProjectCard.tsx
 │   │   ├── Projects.tsx
-│   │   └── Sidebar.tsx
+│   │   ├── Sidebar.tsx
+│   │   └── Skills.tsx
 │   ├── App.css
 │   ├── App.test.js
 │   ├── App.tsx
 │   ├── index.css
-│   ├── index.js
+│   ├── index.tsx
 │   ├── logo.svg
 │   ├── reportWebVitals.js
 │   └── setupTests.js
@@ -101,5 +123,7 @@ portfolio/
 ├── package.json
 ├── postcss.config.js
 ├── README.md
-└── tailwind.config.js
+├── tailwind.config.js
+└── tsconfig.json
+
 ```

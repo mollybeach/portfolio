@@ -30,7 +30,7 @@ const Sidebar: React.FC = () => {
             to={item.path}
             className={({ isActive }) =>
               `block py-2 px-4 rounded-md text-sm font-medium transition-colors ${
-                isActive ? 'bg-primary-purple text-white' : 'text-gray-700 hover:bg-gray-100'
+                isActive ? 'bg-raspberry text-white' : 'text-gray-700 hover:bg-gray-100'
               }`
             }
           >
