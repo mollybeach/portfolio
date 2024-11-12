@@ -1,36 +1,42 @@
 // src/components/ProjectCard.tsx
 import React from 'react';
 
-interface ProjectProps {
+interface ProjectCardProps {
   project: {
     title: string;
     date: string;
     description: string;
     technologies: string[];
-    livePreview?: string;
-  };
+    link: string;
+  }
 }
 
-const ProjectCard: React.FC<ProjectProps> = ({ project }) => (
-  <div className="bg-white rounded-lg shadow-md p-6 mb-6 border border-gray-200">
-    <h3 className="text-lg font-semibold text-gray-900">{project.title}</h3>
-    <p className="text-gray-500">{project.date}</p>
-    <p className="text-gray-700 mb-4">{project.description}</p>
-    <div className="flex flex-wrap gap-2 mb-4">
-      {project.technologies.map((tech) => (
-        <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">
-          {tech}
-        </span>
-      ))}
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  return (
+    <div className="border rounded-lg overflow-hidden shadow-lg">
+      <div className="w-full h-48 relative">
+        <img
+          src={`https://api.microlink.io?url=${encodeURIComponent(project.link)}&screenshot=true&meta=false&embed=screenshot.url`}
+          alt={project.title}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      </div>
+      
+      <div className="p-4">
+        <h3 className="text-lg font-bold">{project.title}</h3>
+        <p className="text-sm text-gray-500">{project.date}</p>
+        <p className="mt-2">{project.description}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.technologies.map((tech, index) => (
+            <span key={index} className="px-2 py-1 bg-gray-100 rounded-full text-sm">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
-    {project.livePreview && (
-      <iframe
-        src={project.livePreview}
-        className="w-full h-64 rounded-lg border border-gray-300"
-        title={project.title}
-      />
-    )}
-  </div>
-);
+  );
+};
 
 export default ProjectCard;
