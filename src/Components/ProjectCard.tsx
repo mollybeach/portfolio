@@ -13,7 +13,12 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="border rounded-lg overflow-hidden shadow-lg">
+    <a 
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+    >
       <div className="w-full h-48 relative">
         <img
           src={`https://api.microlink.io?url=${encodeURIComponent(project.link)}&screenshot=true&meta=false&embed=screenshot.url`}
@@ -35,7 +40,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           ))}
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
