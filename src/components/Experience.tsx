@@ -27,7 +27,7 @@ const experiences: ExperienceItem[] = [
     roles: [
       {
         title: "SOFTWARE ENGINEER",
-        date: "JAN 2020 - PRESENT",
+        date: "JAN 2024 - PRESENT",
         location: "REMOTE",
         details: [
           "Lead development of scalable services across mobile and backend platforms",
@@ -133,6 +133,108 @@ const experiences: ExperienceItem[] = [
           "Smart Contracts",
           "Hyperledger"
         ]
+      }
+    ]
+  },
+  {
+    company: "PARADES",
+    logo: `${process.env.PUBLIC_URL}/images/paradessquare.png`,
+    roles: [
+      {
+        title: "SOLIDITY WEB3 ENGINEER",
+        date: "JAN 2020 - SEP 2022",
+        location: "REMOTE",
+        details: [
+          "Establish, implement, and accomplish business objectives in collaboration with the executive and engineering leadership teams",
+          "Responsible for the entire life cycles of blockchain development",
+          "Business needs should be mapped to blockchain system architecture module design",
+          "Assured company generated smart contract technical goals timescales were met"
+        ],
+        projects: [],
+        skills: ["JavaScript", "React.js", "Solidity", "Node.js", "Hardhat", "TypeScript"]
+      },
+      {
+        title: "REACT TYPESCRIPT ENGINEER",
+        date: "JAN 2020 - SEP 2022",
+        location: "REMOTE",
+        details: [
+          "Integrated React Hooks API to simplify functional components, reducing prop-drilling and improving developer and user experience",
+          "Developed TypeScript ReactJS applications using MUI, with a focus on app management, debugging, security, and GraphQL integration",
+          "Created API endpoints and implemented backend logic, including SQL stored procedures, tables, models, and services"
+        ],
+        projects: [],
+        skills: ["ReactJS", "GraphQL", "TypeScript", "ExpressJS", "SCSS", "Heroku", "PostgreSQL"]
+      },
+      {
+        title: "PYTHON BACKEND ENGINEER",
+        date: "JAN 2020 - SEP 2022",
+        location: "REMOTE",
+        details: [
+          "Designed and implemented RESTful APIs in Python using Flask to manage data pipelines and integrate with external services, ensuring secure, efficient, and scalable backend operations for high-traffic applications",
+          "Developed asynchronous task management with Celery and Redis, automating background processes, optimizing server load, and improving response times by 40%",
+          "Built and maintained PostgreSQL databases, implementing schema design, data migrations, and query optimization to handle large datasets effectively and ensure high availability",
+          "Integrated CI/CD workflows with Jenkins and Docker for streamlined deployment and version control, ensuring rapid, consistent updates across staging and production environments"
+        ],
+        projects: [],
+        skills: ["Python", "Flask", "PostgreSQL", "Celery", "Redis", "Docker"]
+      }
+    ]
+  },
+  {
+    company: "TREASURE",
+    logo: `${process.env.PUBLIC_URL}/images/treasureicon.png`,
+    roles: [
+      {
+        title: "SOLIDITY WEB3 DEVELOPER",
+        date: "JAN 2020 - APR 2022",
+        location: "REMOTE",
+        details: [
+          "Designed decentralized smart contracts using OpenZeppelin standards (ERC-777/20/721/1155/1400) and deployed IPFS-backed NFT contracts using Pinata and Hashlips art engine",
+          "Developed dApps and Web3.js applications with DeFi protocols, using Waffle, Hardhat, React, TypeScript, Web3, and Ethers for frontend UI",
+          "Tested contract protocols on Rinkeby, Kovan, and Ropsten forks, and created Web3 scripts for transaction queries with Etherscan APIs"
+        ],
+        projects: [],
+        skills: ["Solidity", "JavaScript", "React.js", "Node.js", "Hardhat", "TypeScript"]
+      },
+      {
+        title: "GOLANG BLOCKCHAIN ENGINEER",
+        date: "JAN 2020 - APR 2022",
+        location: "REMOTE",
+        details: [
+          "Developed decentralized smart contracts for asset registration and verification, utilizing Ethereum standards and deploying on local Ethereum networks (Ganache, Rinkeby). Integrated IPFS-backed metadata storage using native IPFS APIs for decentralized asset data",
+          "Built dApp backend in Golang with go-ethereum, designing RESTful API endpoints for smart contract interaction and asset ownership tracking, and used React for a simple frontend UI",
+          "Deployed and tested contract protocols on Ethereum testnets, creating Golang scripts for automated transaction handling and real-time asset verification"
+        ],
+        projects: [],
+        skills: ["Golang", "Solidity", "React.js", "Node.js", "IPFS", "Ethereum"]
+      },
+      {
+        title: "PYTHON BLOCKCHAIN DEVELOPER",
+        date: "JAN 2020 - APR 2022",
+        location: "REMOTE",
+        details: [
+          "Developed smart contracts for decentralized voting and governance systems, following ERC-20 and ERC-721 standards, and deployed on Ethereum and Binance Smart Chain. Integrated IPFS for immutable proposal and result storage using Python's ipfshttpclient library",
+          "Built backend APIs in Python using Flask to handle voting interactions with the blockchain and support for user authentication. Created Web3.py scripts for querying transaction history, fetching proposal states, and conducting secure on-chain voting",
+          "Tested smart contract functionality on Rinkeby and BSC Testnet, automating end-to-end testing with Pytest and integrating transaction monitoring with Etherscan and BscScan APIs"
+        ],
+        projects: [],
+        skills: ["Python", "Solidity", "Flask", "Web3.py", "IPFS", "Ethereum"]
+      }
+    ]
+  },
+  {
+    company: "CARD SWAPPER",
+    logo: `${process.env.PUBLIC_URL}/images/cardswappersquare.png`,
+    roles: [
+      {
+        title: "WEB DEVELOPMENT INTERNSHIP",
+        date: "SEPT 2017 - DEC 2019",
+        location: "SEATTLE, WA",
+        details: [
+          "Developed the first user-to-user trading app for gift cards, enabling instant buying, selling, and trading via mobile. The first-generation app was built entirely in Objective-C"
+        ],
+        projects: [],
+        skills: ["Objective-C", "iOS Development", "Mobile Development"]
       }
     ]
   }

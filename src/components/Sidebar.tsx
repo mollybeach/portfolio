@@ -9,7 +9,7 @@ interface NavItem {
 
 const Sidebar: React.FC = () => {
   const navItems: NavItem[] = [
-    { name: 'Overview', path: '/' },
+    { name: 'Overview', path: '/'},
     { name: 'Experience', path: '/experience' },
     { name: 'Skills', path: '/skills' },
     { name: 'Projects', path: '/projects' },
@@ -17,20 +17,63 @@ const Sidebar: React.FC = () => {
   ];
 
   return (
-    <aside className="w-80 h-full border-r bg-gray-50 flex flex-col">
-      <div className="p-6 bg-white border-b">
-        <h1 className="text-2xl font-bold text-gray-900">Molly Beach</h1>
-        <p className="text-sm text-gray-600">Software Engineer</p>
+    <div className="w-64 bg-white shadow-lg rounded-lg p-6 sticky top-6">
+      {/* Profile Section */}
+      <div className="text-center mb-8">
+        <img
+          src={`${process.env.PUBLIC_URL}/images/beach_molly_avi.png`}
+          alt="Molly Beach"
+          className="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-gray-200 shadow-lg object-cover"
+        />
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Molly Beach</h2>
+        <p className="text-gray-600 mb-4">Software Engineer</p>
+        
+        {/* Social Links */}
+        <div className="flex justify-center gap-3 mb-6">
+          <a 
+            href="https://github.com/mollybeach" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="transition-transform hover:scale-110"
+          >
+            <img 
+              src={`${process.env.PUBLIC_URL}/images/githubsquare.png`}
+              alt="GitHub"
+              className="w-8 h-8 rounded shadow-sm hover:shadow-md"
+            />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/mollybeach" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="transition-transform hover:scale-110"
+          >
+            <img 
+              src={`${process.env.PUBLIC_URL}/images/linkedinsquare.png`}
+              alt="LinkedIn"
+              className="w-8 h-8 rounded shadow-sm hover:shadow-md"
+            />
+          </a>
+        </div>
+
+        {/* Contact Info */}
+        <div className="text-sm text-gray-600 mb-6">
+          <p className="mb-1">📞 206.947.6991</p>
+          <p>✉️ mollyjbeach@gmail.com</p>
+        </div>
       </div>
-      
-      <nav className="flex-1 p-6 space-y-2">
+
+      {/* Navigation Links */}
+      <nav className="space-y-2">
         {navItems.map((item) => (
           <NavLink
             key={item.name}
             to={item.path}
             className={({ isActive }) =>
-              `block py-2 px-4 rounded-md text-sm font-medium transition-colors ${
-                isActive ? 'bg-raspberry text-white' : 'text-gray-700 hover:bg-gray-100'
+              `block px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                isActive 
+                  ? 'bg-[#D63384] text-white shadow-sm'
+                  : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900 hover:shadow-sm'
               }`
             }
           >
@@ -38,7 +81,7 @@ const Sidebar: React.FC = () => {
           </NavLink>
         ))}
       </nav>
-    </aside>
+    </div>
   );
 };
 
