@@ -9,6 +9,12 @@ const projects = [
     technologies: ["ReactJS", "GraphQL", "TypeScript", "ExpressJS", "SCSS", "Heroku", "PostgreSQL", "Scala", "Functional Programming", "RESTful APIs", "AWS", "GCP", "PostgreSQL"],
     link: "https://www.spectra.theater/studios"
   },
+  {title: "Memorizwift",
+    date: "Aug 2024 - Nov 2024",
+    description: "Memory card game app built with SwiftUI, based on Stanford's CS193p iOS Development course. This project demonstrates core iOS development concepts and SwiftUI best practices.",
+    technologies: ["SwiftUI", "Swift", "iOS", "Model-View-ViewModel", "TokamakApp", "Carton"],
+    link: "https://github.com/mollybeach/memorizwift"
+  },
   {title: "genaigraphics",
     date: "Jul 2023 - Oct 2023",
     description: "Application merges WebGL technology with Three.js for 3D rendering and Azure ML for AI chat functionalities, empowers users to interact with realistic 3D models that demonstrate step-by-step procedures. The goal is to provide intuitive visual aids that simplify the setup process reduce user errors, and enhance overall user satisfaction 👾.",
