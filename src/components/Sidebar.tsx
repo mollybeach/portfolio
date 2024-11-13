@@ -25,6 +25,7 @@ const Sidebar: React.FC = () => {
     { name: 'Skills', path: '/skills', icon: WrenchIcon },
     { name: 'Projects', path: '/projects', icon: FolderIcon },
     { name: 'Education', path: '/education', icon: AcademicCapIcon },
+    { name: 'Certifications', path: '/certifications', icon: AcademicCapIcon },
   ];
 
   return (
