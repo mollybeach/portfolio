@@ -400,7 +400,7 @@ const projects = [
     date: "Mar 2020 - Dec 2020",
     description: "Django web application for managing salon appointments and services.",
     technologies: ["Django", "Python", "PostgreSQL", "Heroku", "HTML", "CSS", "JavaScript"],
-    link: "https://mollybeach.github.io/dandelionCoiffure/"
+    link: "https://google.com"
   },
   {
     title: "ihaehada",
