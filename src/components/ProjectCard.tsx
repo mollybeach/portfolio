@@ -19,11 +19,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       rel="noopener noreferrer"
       className="block border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
     >
-      <div className="w-full h-48 relative">
+      <div className="w-full h-48 relative p-2">
         <img
           src={`https://api.microlink.io?url=${encodeURIComponent(project.link)}&screenshot=true&meta=false&embed=screenshot.url`}
           alt={project.title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
           loading="lazy"
         />
       </div>

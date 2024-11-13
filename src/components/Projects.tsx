@@ -3,6 +3,19 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 
 const projects = [
+  {title: "genaigraphics",
+    date: "July 2023- Oct 2023",
+    description: "Application merges WebGL technology with Three.js for 3D rendering and Azure ML for AI chat functionalities, empowers users to interact with realistic 3D models that demonstrate step-by-step procedures. The goal is to provide intuitive visual aids that simplify the setup process reduce user errors, and enhance overall user satisfaction 👾.",
+    technologies: ["React", "Python", "Threejs", "Typescript", "Astro", "Azure-ml", "Ai-prompts"],
+    link: "https://mollybeach.github.io/genaigraphics/agent/"
+  },
+  {
+    title: "ihaehada",
+    date: "Mar 2020 - Dec 2020",
+    description: "Learn Korean language application. Browse the Ihaehada collection of words and phrases.",
+    technologies: ["Vue", "JavaScript", "Firebase"],
+    link: "https://ihaehada.firebaseapp.com"
+  },
   {
     title: "CryptoGene",
     date: "Mar 2020 - Dec 2020",
@@ -10,13 +23,6 @@ const projects = [
     technologies: ["React", "Web3.js", "Solidity", "GLSL", "Firebase"],
     link: "https://chromagenetic.firebaseapp.com"
   },
-  {
-    title: "Ihaehada",
-    date: "Mar 2020 - Dec 2020",
-    description: "Learn Korean language application. Browse the Ihaehada collection of words and phrases.",
-    technologies: ["Vue", "JavaScript", "Firebase"],
-    link: "https://ihaehada.firebaseapp.com"
-  }
 ];
 
 const Projects: React.FC = () => {
