@@ -1,7 +1,13 @@
 // src/components/Overview.tsx
 import React from 'react';
 
+import { 
+  PhoneIcon,
+  EnvelopeIcon
+} from '@heroicons/react/24/outline';
+
 const Overview: React.FC = () => {
+
   const shaderGifs = [
     { src: `${process.env.PUBLIC_URL}/images/mandelbrot.gif`, title: 'Mandelbrot Set' },
     { src: `${process.env.PUBLIC_URL}/images/owl.gif`, title: 'Owl' },
@@ -38,9 +44,9 @@ const Overview: React.FC = () => {
               className="transition-transform hover:scale-110"
             >
               <img 
-                src={`${process.env.PUBLIC_URL}/images/githubsquare.png`}
+                src={`${process.env.PUBLIC_URL}/images/github-mark.png`}
                 alt="GitHub"
-                className="w-10 h-10 rounded shadow-sm hover:shadow-md"
+                className="w-8 h-8 rounded shadow-sm hover:shadow-md"
               />
             </a>
             <a 
@@ -49,12 +55,12 @@ const Overview: React.FC = () => {
               rel="noopener noreferrer"
               className="transition-transform hover:scale-110"
             >
-              <img 
-                src={`${process.env.PUBLIC_URL}/images/linkedinsquare.png`}
-                alt="LinkedIn"
-                className="w-10 h-10 rounded shadow-sm hover:shadow-md"
-              />
-            </a>
+            <img 
+              src={`${process.env.PUBLIC_URL}/images/linkedin-icon.png`}
+              alt="LinkedIn"
+              className="w-8 h-8 rounded shadow-sm hover:shadow-md"
+            />
+          </a>
           </div>
         </div>
         <img 
@@ -65,9 +71,15 @@ const Overview: React.FC = () => {
       </div>
 
       {/* Contact Info */}
-      <div className="mb-6 text-gray-700">
-        <p className="mb-2">📞 206.947.6991</p>
-        <p className="mb-2">✉️ mollyjbeach@gmail.com</p>
+      <div className="mb-6 text-gray-700 bg-white">
+        <p className="mb-1 text-gray-700 flex items-center">
+          <PhoneIcon className="h-5 w-5 mr-2" />
+          206.947.6991
+        </p>
+        <p className="text-gray-700 flex items-center">
+          <EnvelopeIcon className="h-5 w-5 mr-2" />
+          mollyjbeach@gmail.com
+        </p>
       </div>
 
       {/* Overview content */}

@@ -48,7 +48,7 @@ const Sidebar: React.FC = () => {
             className="transition-transform hover:scale-110"
           >
             <img 
-              src={`${process.env.PUBLIC_URL}/images/githubsquare.png`}
+              src={`${process.env.PUBLIC_URL}/images/github-mark.png`}
               alt="GitHub"
               className="w-8 h-8 rounded shadow-sm hover:shadow-md"
             />
@@ -60,7 +60,7 @@ const Sidebar: React.FC = () => {
             className="transition-transform hover:scale-110"
           >
             <img 
-              src={`${process.env.PUBLIC_URL}/images/linkedinsquare.png`}
+              src={`${process.env.PUBLIC_URL}/images/linkedin-icon.png`}
               alt="LinkedIn"
               className="w-8 h-8 rounded shadow-sm hover:shadow-md"
             />
@@ -68,15 +68,15 @@ const Sidebar: React.FC = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="text-sm text-gray-600 mb-6 space-y-2">
-          <div className="flex items-center justify-center gap-2">
-            <PhoneIcon className="h-4 w-4" />
-            <p>206.947.6991</p>
-          </div>
-          <div className="flex items-center justify-center gap-2">
-            <EnvelopeIcon className="h-4 w-4" />
-            <p>mollyjbeach@gmail.com</p>
-          </div>
+        <div className="text-sm text-gray-600 mb-6">
+          <p className="mb-1">
+            <PhoneIcon className="h-5 w-5 inline mr-2" />
+            206.947.6991
+          </p>
+          <p>
+            <EnvelopeIcon className="h-5 w-5 inline mr-2" />
+            mollyjbeach@gmail.com
+          </p>
         </div>
       </div>
 
