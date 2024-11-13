@@ -163,7 +163,7 @@ const experiences: ExperienceItem[] = [
           "Created API endpoints and implemented backend logic, including SQL stored procedures, tables, models, and services"
         ],
         projects: [],
-        skills: ["ReactJS", "GraphQL", "TypeScript", "ExpressJS", "SCSS", "Heroku", "PostgreSQL"]
+        skills: ["ReactJS", "GraphQL", "TypeScript", "ExpressJS", "SCSS", "PostgreSQL"]
       },
       {
         title: "PYTHON BACKEND ENGINEER",
