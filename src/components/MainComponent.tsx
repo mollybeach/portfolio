@@ -12,6 +12,7 @@ const MainComponent: React.FC = () => {
     <main className="flex-1 overflow-auto p-8 bg-white">
       <Routes>
         <Route path="/" element={<Overview />} />
+        <Route path="/portfolio" element={<Overview />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />

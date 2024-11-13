@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
   {title: "genaigraphics",
-    date: "July 2023- Oct 2023",
+    date: "Jul 2023 - Oct 2023",
     description: "Application merges WebGL technology with Three.js for 3D rendering and Azure ML for AI chat functionalities, empowers users to interact with realistic 3D models that demonstrate step-by-step procedures. The goal is to provide intuitive visual aids that simplify the setup process reduce user errors, and enhance overall user satisfaction 👾.",
     technologies: ["React", "Python", "Threejs", "Typescript", "Astro", "Azure-ml", "Ai-prompts"],
     link: "https://mollybeach.github.io/genaigraphics/agent/"
