@@ -10,83 +10,162 @@ interface ProjectCardProps {
     microlink: string;
     link: string;
     previewType: 'microlink' | 'image';
+    overview: string;
+    keyFeatures: {
+      title: string;
+      description: string;
+      icon?: string;
+    }[];
+    installation: {
+      steps: {
+        command: string;
+        description: string;
+      }[];
+    };
+    screenshots: {
+      url: string;
+      alt: string;
+      caption?: string;
+    }[];
+    demoUrl?: string;
+    githubUrl?: string;
+    status: 'In Development' | 'Completed' | 'Archived';
+    architecture?: string;
+    techStack: {
+      frontend?: string[];
+      backend?: string[];
+      deployment?: string[];
+      tools?: string[];
+    };
   }
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   
-  const truncatedDescription = project.description.length > 150 
-    ? project.description.slice(0, 150) + '...'
-    : project.description;
-
   return (
-    <a 
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
+    <div 
       className={`block border rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out
         ${isExpanded ? 'col-span-full w-[85%] mx-auto bg-white relative z-10' : 'relative z-0'}`}
-      style={{
-        order: isExpanded ? -1 : 0
-      }}
+      style={{ order: isExpanded ? -1 : 0 }}
     >
-      <div>
-        <div className={`relative transition-all duration-300 ease-in-out
-          ${isExpanded ? 'h-[400px] p-4' : 'h-48 p-2'}`}
-        >
-          {project.previewType === 'microlink' ? (
-            <img
-              src={`https://api.microlink.io?url=${encodeURIComponent(project.microlink)}&screenshot=true&meta=false&embed=screenshot.url`}
-              alt={project.title}
-              className={`w-full h-full object-contain transition-all duration-300`}
-              loading="lazy"
-            />
-          ) : (
+      <div className="flex flex-col">
+        {/* Preview Image with Link */}
+        <a href={project.link} target="_blank" rel="noopener noreferrer">
+          <div className={`relative transition-all duration-300 ease-in-out
+            ${isExpanded ? 'h-[400px]' : 'h-48'} p-2`}>
             <img
               src={project.microlink}
               alt={project.title}
-              className={`w-full h-full object-contain transition-all duration-300`}
+              className="w-full h-full object-contain hover:opacity-80 transition-opacity duration-200"
               loading="lazy"
             />
-          )}
-        </div>
-        
-        <div className={`p-4 ${isExpanded ? 'max-w-4xl mx-auto' : ''}`}>
-          <div className="flex justify-between items-start">
-            <div>
-              <h3 className={`font-bold transition-all duration-300 ${isExpanded ? 'text-2xl' : 'text-lg'}`}>
-                {project.title}
-              </h3>
-              <p className="text-sm text-gray-500">{project.date}</p>
-            </div>
-            <button 
+          </div>
+        </a>
+
+        {/* Content */}
+        <div className="p-6">
+          {/* Header */}
+          <div className="flex flex-wrap items-start justify-between mb-1">
+            <h3 className="text-xl font-bold">{project.title}</h3>
+            <span className="text-sm text-gray-600">{project.date}</span>
+          </div>
+          
+          {/* Status Badge - Now on its own row */}
+          <div className="mb-2">
+            <span className={`text-sm px-2 py-1 rounded-full ${
+              project.status === 'Completed' ? 'bg-green-100 text-green-800' :
+              project.status === 'In Development' ? 'bg-blue-100 text-blue-800' :
+              'bg-gray-100 text-gray-800'
+            }`}>
+              {project.status}
+            </span>
+          </div>
+
+          {/* Overview */}
+          <div className={`transition-all duration-300 ease-in-out
+            ${isExpanded ? 'max-h-[800px]' : 'max-h-[100px] overflow-hidden'}`}>
+            <p className="text-gray-700 leading-relaxed mb-4">
+              {isExpanded ? project.overview : project.description}
+            </p>
+
+            {isExpanded && (
+              <>
+                {/* Key Features */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold mb-2">🔑 Key Features</h4>
+                  <ul className="space-y-2">
+                    {project.keyFeatures.map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="mr-2">{feature.icon}</span>
+                        <div>
+                          <span className="font-medium">{feature.title}:</span>
+                          <span className="text-gray-600 ml-1">{feature.description}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Tech Stack */}
+                <div className="mb-6">
+                  <h4 className="text-lg font-semibold mb-2">🛠️ Tech Stack</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    {Object.entries(project.techStack).map(([category, techs]) => (
+                      <div key={category}>
+                        <h5 className="font-medium capitalize mb-1">{category}:</h5>
+                        <ul className="list-disc list-inside text-gray-600">
+                          {techs.map((tech, index) => (
+                            <li key={index}>{tech}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* Technologies Tags */}
+          <div className="mt-4 flex flex-wrap gap-2">
+            {project.technologies
+              .slice(0, isExpanded ? undefined : 6)
+              .map((tech, index) => (
+                <span key={index} className="px-2 py-1 bg-gray-100 rounded-full text-sm">
+                  {tech}
+                </span>
+            ))}
+            {!isExpanded && project.technologies.length > 6 && (
+              <span className="px-2 py-1 bg-gray-100 rounded-full text-sm text-gray-500">
+                +{project.technologies.length - 6} more
+              </span>
+            )}
+          </div>
+
+          {/* Dropdown Button */}
+          <div className="mt-4 flex justify-center">
+            <button
               onClick={(e) => {
                 e.preventDefault();
                 setIsExpanded(!isExpanded);
               }}
-              className="text-[#B8336A] hover:text-[#8D2751] transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-white text-[#D63384] border-2 border-[#D63384] rounded-full hover:bg-[#D63384] hover:text-white transition-all duration-200"
             >
-              {isExpanded ? '▲ Close' : '▼ Expand'}
+              <span className="font-medium">{isExpanded ? 'Show Less' : 'Show More'}</span>
+              <svg 
+                className={`w-4 h-4 transform transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
             </button>
-          </div>
-          <div className={`mt-4 transition-all duration-300 ease-in-out
-            ${isExpanded ? 'max-h-[800px]' : 'max-h-[100px] overflow-hidden'}`}>
-            <p className={`leading-relaxed ${isExpanded ? 'text-lg' : ''}`}>
-              {isExpanded ? project.description : truncatedDescription}
-            </p>
-          </div>
-          <div className="mt-4 flex flex-wrap gap-2">
-            {project.technologies.map((tech, index) => (
-              <span key={index} className={`px-2 py-1 bg-gray-100 rounded-full transition-all duration-300
-                ${isExpanded ? 'text-base' : 'text-sm'}`}>
-                {tech}
-              </span>
-            ))}
           </div>
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 

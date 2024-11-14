@@ -2,7 +2,7 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 
-const projects: {
+interface Project {
   title: string;
   date: string;
   description: string;
@@ -10,7 +10,36 @@ const projects: {
   microlink: string;
   link: string;
   previewType: 'microlink' | 'image';
-}[] = [
+  overview: string;
+  keyFeatures: {
+    title: string;
+    description: string;
+    icon?: string;
+  }[];
+  installation: {
+    steps: {
+      command: string;
+      description: string;
+    }[];
+  };
+  screenshots: {
+    url: string;
+    alt: string;
+    caption?: string;
+  }[];
+  demoUrl?: string;
+  githubUrl?: string;
+  status: 'In Development' | 'Completed' | 'Archived';
+  architecture?: string;
+  techStack: {
+    frontend?: string[];
+    backend?: string[];
+    deployment?: string[];
+    tools?: string[];
+  };
+}
+
+const projects: Project[] = [
   {
     title: "Spectra",
     date: "Jan 2024 - Present",
@@ -18,24 +47,29 @@ const projects: {
     technologies: ["ReactJS", "GraphQL", "TypeScript", "ExpressJS", "SCSS", "Heroku", "PostgreSQL", "Scala", "Functional Programming", "RESTful APIs", "AWS", "GCP", "PostgreSQL"],
     microlink: `${process.env.PUBLIC_URL}/images/spectra-app-preview.png`,
     link: "https://www.spectra.theater/studios",
-    previewType: "image"
-  },
-  {
-    title: "Python-Django-Appointment-Calendar-Salon",
-    date: "Mar 2020 - Dec 2020",
-    description: "Django web application for managing salon appointments and services.",
-    technologies: ["Django", "Python", "PostgreSQL", "Heroku", "HTML", "CSS", "JavaScript"],
-    microlink: `${process.env.PUBLIC_URL}/images/coiffure-app-preview.png`,
-    link: "https://mollybeach.github.io/dandelionCoiffure/",
-    previewType: "image"
-  },
-  {title: "Memorizwift",
-    date: "Aug 2024 - Nov 2024",
-    description: "Memory card game app built with SwiftUI, based on Stanford's CS193p iOS Development course. This project demonstrates core iOS development concepts and SwiftUI best practices.",
-    technologies: ["SwiftUI", "Swift", "iOS", "Model-View-ViewModel", "TokamakApp", "Carton"],
-    microlink: `${process.env.PUBLIC_URL}/images/swiftapp.png`,
-    link: "https://mollybeach.github.io/memorizwift/",
-    previewType: "image"
+    previewType: "image",
+    overview: "A comprehensive project management tool",
+    keyFeatures: [
+      { title: "React Hooks", description: "Simplifies functional components" },
+      { title: "GraphQL Integration", description: "Improves data fetching" },
+      { title: "TypeScript", description: "Improves code quality" }
+    ],
+    installation: {
+      steps: [
+        { command: "npm install", description: "Install project dependencies" },
+        { command: "npm start", description: "Start the development server" }
+      ]
+    },
+    screenshots: [
+      { url: `${process.env.PUBLIC_URL}/images/spectra-app-preview.png`, alt: "Spectra App Preview" }
+    ],
+    status: "In Development",
+    techStack: {
+      frontend: ["ReactJS", "GraphQL", "TypeScript"],
+      backend: ["ExpressJS", "SCSS", "Heroku"],
+      deployment: ["AWS", "GCP"],
+      tools: ["MUI", "Heroku", "PostgreSQL"]
+    }
   },
   {title: "genaigraphics",
     date: "Jul 2023 - Oct 2023",
@@ -43,16 +77,29 @@ const projects: {
     technologies: ["React", "Python", "Threejs", "Typescript", "Astro", "Azure-ml", "Ai-prompts"],
     microlink: `${process.env.PUBLIC_URL}/images/genaigraphics-app-preview.png`,
     link: "https://mollybeach.github.io/genaigraphics/agent/",
-    previewType: "image"
-  },
-  {
-    title: "ihaehada",
-    date: "Mar 2020 - Dec 2020",
-    description: "Learn Korean language application. Browse the Ihaehada collection of words and phrases.",
-    technologies: ["Vue", "JavaScript", "Firebase"],
-    microlink: "https://ihaehada.firebaseapp.com",
-    link: "https://ihaehada.firebaseapp.com",
-    previewType: "microlink"
+    previewType: "image",
+    overview: "A 3D visualization tool",
+    keyFeatures: [
+      { title: "React", description: "JavaScript library" },
+      { title: "Python", description: "Programming language" },
+      { title: "Threejs", description: "3D rendering library" }
+    ],
+    installation: {
+      steps: [
+        { command: "npm install", description: "Install project dependencies" },
+        { command: "npm start", description: "Start the development server" }
+      ]
+    },
+    screenshots: [
+      { url: `${process.env.PUBLIC_URL}/images/genaigraphics-app-preview.png`, alt: "Genaigraphics App Preview" }
+    ],
+    status: "Completed",
+    techStack: {
+      frontend: ["React", "Python"],
+      backend: ["Threejs", "Typescript", "Astro"],
+      deployment: ["Azure-ml"],
+      tools: ["VSCode", "Azure"]
+    }
   },
   {
     title: "CryptoGene",
@@ -61,7 +108,124 @@ const projects: {
     technologies: ["React", "Web3.js", "Solidity", "GLSL", "Firebase"],
     microlink: `${process.env.PUBLIC_URL}/images/cryptogene-app-preview.png`,
     link: "https://chromagenetic.firebaseapp.com",
-    previewType: "image"
+    previewType: "image",
+    overview: "A decentralized application",
+    keyFeatures: [
+      { title: "React", description: "JavaScript library" },
+      { title: "Web3.js", description: "JavaScript library" },
+      { title: "Solidity", description: "Programming language" }
+    ],
+    installation: {
+      steps: [
+        { command: "npm install", description: "Install project dependencies" },
+        { command: "npm start", description: "Start the development server" }
+      ]
+    },
+    screenshots: [
+      {url: `${process.env.PUBLIC_URL}/images/ihaehada-app-preview.png`
+
+      , alt: "CryptoGene App Preview" }
+    ],
+    status: "Completed",
+    techStack: {
+      frontend: ["React", "Web3.js"],
+      backend: ["Solidity", "GLSL"],
+      deployment: ["Firebase"],
+      tools: ["VSCode", "Solidity"]
+    }
+  },
+  {
+    title: "ihaehada",
+    date: "Mar 2020 - Dec 2020",
+    description: "Learn Korean language application. Browse the Ihaehada collection of words and phrases.",
+    technologies: ["Vue", "JavaScript", "Firebase"],
+    microlink: `${process.env.PUBLIC_URL}/images/ihaehada-app-preview.png`,
+    link: "https://ihaehada.firebaseapp.com",
+    previewType: "image",
+    overview: "A language learning tool",
+    keyFeatures: [
+      { title: "Vue", description: "JavaScript framework" },
+      { title: "JavaScript", description: "Programming language" },
+      { title: "Firebase", description: "Backend as a service" }
+    ],
+    installation: {
+      steps: [
+        { command: "npm install", description: "Install project dependencies" },
+        { command: "npm start", description: "Start the development server" }
+      ]
+    },
+    screenshots: [
+      { url: `${process.env.PUBLIC_URL}/images/ihaehada-app-preview.png`, alt: "Ihaehada App Preview" }
+    ],
+    status: "Completed",
+    techStack: {
+      frontend: ["Vue", "JavaScript"],
+      backend: ["Firebase"],
+      deployment: [],
+      tools: ["VSCode", "Firebase"]
+    }
+  },
+  {
+    title: "Python-Django-Appointment-Calendar-Salon",
+    date: "Mar 2020 - Dec 2020",
+    description: "Django web application for managing salon appointments and services.",
+    technologies: ["Django", "Python", "PostgreSQL", "Heroku", "HTML", "CSS", "JavaScript"],
+    microlink: `${process.env.PUBLIC_URL}/images/coiffure-app-preview.png`,
+    link: "https://mollybeach.github.io/dandelionCoiffure/",
+    previewType: "image",
+    overview: "A simple appointment management tool",
+    keyFeatures: [
+      { title: "Django", description: "Python web framework" },
+      { title: "PostgreSQL", description: "Database management" },
+      { title: "Heroku", description: "Cloud platform" }
+    ],
+    installation: {
+      steps: [
+        { command: "pip install django", description: "Install Django" },
+        { command: "pip install psycopg2", description: "Install PostgreSQL" },
+        { command: "pip install gunicorn", description: "Install Gunicorn" }
+      ]
+    },
+    screenshots: [
+      { url: `${process.env.PUBLIC_URL}/images/coiffure-app-preview.png`, alt: "Coiffure App Preview" }
+    ],
+    status: "Completed",
+    techStack: {
+      frontend: ["HTML", "CSS", "JavaScript"],
+      backend: ["Django", "Python", "PostgreSQL"],
+      deployment: ["Heroku"],
+      tools: ["PyCharm", "PostgreSQL"]
+    }
+  },
+  {title: "Memorizwift",
+    date: "Aug 2024 - Nov 2024",
+    description: "Memory card game app built with SwiftUI, based on Stanford's CS193p iOS Development course. This project demonstrates core iOS development concepts and SwiftUI best practices.",
+    technologies: ["SwiftUI", "Swift", "iOS", "Model-View-ViewModel", "TokamakApp", "Carton"],
+    microlink: `${process.env.PUBLIC_URL}/images/swiftapp.png`,
+    link: "https://mollybeach.github.io/memorizwift/",
+    previewType: "image",
+    overview: "A fun memory game app",
+    keyFeatures: [
+      { title: "SwiftUI", description: "Modern UI framework" },
+      { title: "Model-View-ViewModel", description: "Improves code organization" },
+      { title: "TokamakApp", description: "Improves performance" }
+    ],
+    installation: {
+      steps: [
+        { command: "npm install", description: "Install project dependencies" },
+        { command: "npm start", description: "Start the development server" }
+      ]
+    },
+    screenshots: [
+      { url: `${process.env.PUBLIC_URL}/images/swiftapp.png`, alt: "Memorizwift App Preview" }
+    ],
+    status: "In Development",
+    techStack: {
+      frontend: ["SwiftUI", "Swift"],
+      backend: ["TokamakApp", "Carton"],
+      deployment: ["iOS"],
+      tools: ["Xcode", "Swift"]
+    }
   },
 ];
 
