@@ -196,30 +196,6 @@ const experiences: ExperienceItem[] = [
         projects: [],
         skills: ["Solidity", "JavaScript", "React.js", "Node.js", "Hardhat", "TypeScript"]
       },
-      {
-        title: "GOLANG BLOCKCHAIN ENGINEER",
-        date: "JAN 2020 - APR 2022",
-        location: "REMOTE",
-        details: [
-          "Developed decentralized smart contracts for asset registration and verification, utilizing Ethereum standards and deploying on local Ethereum networks (Ganache, Rinkeby). Integrated IPFS-backed metadata storage using native IPFS APIs for decentralized asset data",
-          "Built dApp backend in Golang with go-ethereum, designing RESTful API endpoints for smart contract interaction and asset ownership tracking, and used React for a simple frontend UI",
-          "Deployed and tested contract protocols on Ethereum testnets, creating Golang scripts for automated transaction handling and real-time asset verification"
-        ],
-        projects: [],
-        skills: ["Golang", "Solidity", "React.js", "Node.js", "IPFS", "Ethereum"]
-      },
-      {
-        title: "PYTHON BLOCKCHAIN DEVELOPER",
-        date: "JAN 2020 - APR 2022",
-        location: "REMOTE",
-        details: [
-          "Developed smart contracts for decentralized voting and governance systems, following ERC-20 and ERC-721 standards, and deployed on Ethereum and Binance Smart Chain. Integrated IPFS for immutable proposal and result storage using Python's ipfshttpclient library",
-          "Built backend APIs in Python using Flask to handle voting interactions with the blockchain and support for user authentication. Created Web3.py scripts for querying transaction history, fetching proposal states, and conducting secure on-chain voting",
-          "Tested smart contract functionality on Rinkeby and BSC Testnet, automating end-to-end testing with Pytest and integrating transaction monitoring with Etherscan and BscScan APIs"
-        ],
-        projects: [],
-        skills: ["Python", "Solidity", "Flask", "Web3.py", "IPFS", "Ethereum"]
-      }
     ]
   },
   {
