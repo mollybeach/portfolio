@@ -102,6 +102,37 @@ const projects: Project[] = [
     }
   },
   {
+    title: "token-gating-discord-bot-api",
+    date: "Jan 2024 - Present",
+    description: "A Discord bot integration that manages server access based on users' cryptocurrency token holdings. The system verifies wallet balances through smart contracts and automatically grants/revokes Discord roles based on token ownership. Features real-time monitoring via Moralis webhooks and OAuth2 authentication 🤖.",
+    technologies: ["Next.js", "TypeScript", "MongoDB", "Discord.js", "Thirdweb", "AWS Lambda", "Moralis", "Smart Contracts"],
+    microlink: `${process.env.PUBLIC_URL}/images/token-gate-preview.png`,
+    link: "https://mollybeach.github.io/token-gating-discord-bot-api/",
+    previewType: "image",
+    overview: "Discord bot for token-based access control",
+    keyFeatures: [
+      { title: "Automated Role Management", description: "Dynamic role assignment based on token holdings" },
+      { title: "Smart Contract Integration", description: "Real-time wallet verification" },
+      { title: "Web3 Authentication", description: "Secure wallet connection and OAuth2" }
+    ],
+    installation: {
+      steps: [
+        { command: "npm install", description: "Install dependencies" },
+        { command: "sls deploy --stage dev", description: "Deploy serverless functions" }
+      ]
+    },
+    screenshots: [
+      { url: `${process.env.PUBLIC_URL}/images/token-gate-preview.png`, alt: "Token Gate Bot Preview" }
+    ],
+    status: "In Development",
+    techStack: {
+      frontend: ["Next.js", "React", "TypeScript", "Thirdweb SDK"],
+      backend: ["Serverless Framework", "Node.js", "MongoDB", "Discord.js"],
+      deployment: ["AWS Lambda", "GitHub Pages", "Docker"],
+      tools: ["VS Code", "GitHub Actions", "Moralis"]
+    }
+  },
+  {
     title: "CryptoGene",
     date: "Mar 2020 - Dec 2020",
     description: "DApp/Web3JS app converting DNA data from Ancestry.com into NFTs.",
