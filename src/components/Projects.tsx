@@ -39,7 +39,39 @@ interface Project {
   };
 }
 
+
 const projects: Project[] = [
+  {
+    title: "omnipedia",
+    date: "Nov 2024 - Present",
+    description: "A sophisticated document analysis and compliance evaluation tool that helps researchers and compliance professionals analyze text against predefined requirements and standards. Features real-time text highlighting, automated scoring system, and interactive evaluation viewing with dark/light mode support 📚.",
+    technologies: ["Next.js 14", "TypeScript", "Tailwind CSS", "shadcn/ui", "SWR", "React Hooks", "Vercel"],
+    microlink: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731781342/portfolio/omnipedia-preview_b814jl.png",
+    link: "https://omnipedia-client.pages.dev/",
+    previewType: "image",
+    overview: "Document analysis and compliance tool",
+    keyFeatures: [
+      { title: "Interactive Text Analysis", description: "Real-time highlighting and scoring" },
+      { title: "Requirements Management", description: "Hierarchical compliance tracking" },
+      { title: "Smart Evaluation", description: "Automated scoring with color coding" }
+    ],
+    installation: {
+      steps: [
+        { command: "pnpm install", description: "Install project dependencies" },
+        { command: "pnpm dev", description: "Start the development server" }
+      ]
+    },
+    screenshots: [
+      { url: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731781342/portfolio/omnipedia-preview_b814jl.png", alt: "Omnipedia App Preview" }
+    ],
+    status: "In Development",
+    techStack: {
+      frontend: ["Next.js 14", "TypeScript", "Tailwind CSS"],
+      backend: ["SWR", "React Hooks", "Context"],
+      deployment: ["Vercel", "Cloudflare"],
+      tools: ["shadcn/ui", "Radix UI", "Geist Font"]
+    }
+  },
   {
     title: "Spectra",
     date: "Jan 2024 - Present",
@@ -124,7 +156,7 @@ const projects: Project[] = [
     screenshots: [
       { url: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731725240/portfolio/token-gating-app_yuwitc.png", alt: "Token Gate Bot Preview" }
     ],
-    status: "In Development",
+    status: "Completed",
     techStack: {
       frontend: ["Next.js", "React", "TypeScript", "Thirdweb SDK"],
       backend: ["Serverless Framework", "Node.js", "MongoDB", "Discord.js"],
