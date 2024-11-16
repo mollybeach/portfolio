@@ -10,7 +10,7 @@ const Overview: React.FC = () => {
 
   const shaderGifs = [
     { src: `${process.env.PUBLIC_URL}/images/mandelbrot.gif`, title: 'Mandelbrot Set' },
-    { src: `${process.env.PUBLIC_URL}/images/owl.gif`, title: 'Owl' },
+    { src: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731722339/portfolio/owl_ppb6ih.gif", title: 'Owl' },
     { src: `${process.env.PUBLIC_URL}/images/fidgetToy.gif`, title: 'Fidget Toy' },
     { src: `${process.env.PUBLIC_URL}/images/milkers.gif`, title: 'Milkers' },
     { src: `${process.env.PUBLIC_URL}/images/gene.gif`, title: 'Gene Expression' },
@@ -64,7 +64,7 @@ const Overview: React.FC = () => {
           </div>
         </div>
         <img 
-          src={`${process.env.PUBLIC_URL}/images/beach_molly_avi.png`}
+          src={"https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731722275/portfolio/beach_molly_avi_yyzr0j.png"}
           alt="Molly Beach"
           className="w-24 h-24 rounded-full object-cover border-2 border-gray-200 shadow-lg"
         />
