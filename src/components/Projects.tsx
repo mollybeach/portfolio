@@ -106,7 +106,7 @@ const projects: Project[] = [
     date: "Jan 2022 - April 2022",
     description: "A Discord bot integration that manages server access based on users' cryptocurrency token holdings. The system verifies wallet balances through smart contracts and automatically grants/revokes Discord roles based on token ownership. Features real-time monitoring via Moralis webhooks and OAuth2 authentication 🤖.",
     technologies: ["Next.js", "TypeScript", "MongoDB", "Discord.js", "Thirdweb", "AWS Lambda", "Moralis", "Smart Contracts"],
-    microlink: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731722294/portfolio/token-gating-discord-bot-api-app-preview_t1pfto.png",
+    microlink: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731725240/portfolio/token-gating-app_yuwitc.png",
     link: "https://mollybeach.github.io/token-gating-discord-bot-api/",
     previewType: "image",
     overview: "Discord bot for token-based access control",
@@ -122,7 +122,7 @@ const projects: Project[] = [
       ]
     },
     screenshots: [
-      { url: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731722294/portfolio/token-gating-discord-bot-api-app-preview_t1pfto.png", alt: "Token Gate Bot Preview" }
+      { url: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731725240/portfolio/token-gating-app_yuwitc.png", alt: "Token Gate Bot Preview" }
     ],
     status: "In Development",
     techStack: {
