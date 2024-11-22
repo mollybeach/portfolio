@@ -42,10 +42,41 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "RNAlytics",
+    date: "Nov 2024 - Present",
+    description: "An in-depth analysis of RNA-seq data comparing the effects of Cyclosporin A (CsA) and Voclosporin (VOC) treatments against control groups. Utilizes iPathwayGuide to highlight differentially expressed genes (DEGs), pathway impacts, and biological processes affected by these treatments.",
+    technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "React", "Plotly.js", "Flask", "Pandas"],
+    microlink: "https://example.com/rnalytics-preview.png", // Update with actual preview link
+    link: "https://rnalytics.pages.dev/",
+    previewType: "image",
+    overview: "RNA-seq data analysis and visualization tool",
+    keyFeatures: [
+      { title: "Differential Gene Expression", description: "Identifies DEGs between treatments" },
+      { title: "Pathway Impact Analysis", description: "Visualizes pathway disruptions" },
+      { title: "Interactive Visualizations", description: "Dynamic charts and graphs for data exploration" }
+    ],
+    installation: {
+      steps: [
+        { command: "pip install -r requirements.txt", description: "Install Python dependencies" },
+        { command: "npm install", description: "Install Node.js dependencies" }
+      ]
+    },
+    screenshots: [
+      { url: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1732242945/rnaanlytics_kx4ggv.png", alt: "RNAlytics App Screenshot" } 
+    ],
+    status: "In Development",
+    techStack: {
+      frontend: ["Next.js 15", "TypeScript", "Tailwind CSS"],
+      backend: ["Flask", "Pandas"],
+      deployment: ["Vercel", "AWS"],
+      tools: ["Plotly.js", "React Hooks"]
+    }
+  },
+  {
     title: "omnipedia",
     date: "Nov 2024 - Present",
-    description: "A sophisticated document analysis and compliance evaluation tool that helps researchers and compliance professionals analyze text against predefined requirements and standards. Features real-time text highlighting, automated scoring system, and interactive evaluation viewing with dark/light mode support 📚.",
-    technologies: ["Next.js 14", "TypeScript", "Tailwind CSS", "shadcn/ui", "SWR", "React Hooks", "Vercel"],
+    description: "A cutting-edge document analysis and compliance evaluation tool that bridges the gap between language models and structured style guidelines. Designed for researchers, professionals, and contributors to platforms like Wikipedia, Omnipedia leverages advanced AI to automate article reviews, ensuring compliance with predefined standards while promoting efficiency and transparency in content evaluation. 📚.",
+    technologies: ["Next.js 14", "TypeScript", "Tailwind CSS", "SWR", "shadcn/ui", "React Hooks", "Vercel"],
     microlink: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731781342/portfolio/omnipedia-preview_b814jl.png",
     link: "https://omnipedia-client.pages.dev/",
     previewType: "image",
