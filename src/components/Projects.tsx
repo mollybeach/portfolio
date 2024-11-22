@@ -46,7 +46,7 @@ const projects: Project[] = [
     date: "Nov 2024 - Present",
     description: "An in-depth analysis of RNA-seq data comparing the effects of Cyclosporin A (CsA) and Voclosporin (VOC) treatments against control groups. Utilizes iPathwayGuide to highlight differentially expressed genes (DEGs), pathway impacts, and biological processes affected by these treatments.",
     technologies: ["Next.js 15", "TypeScript", "Tailwind CSS", "React", "Plotly.js", "Flask", "Pandas"],
-    microlink: "https://example.com/rnalytics-preview.png", // Update with actual preview link
+    microlink: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1732242945/rnaanlytics_kx4ggv.png", // Update with actual preview link
     link: "https://rnalytics.pages.dev/",
     previewType: "image",
     overview: "RNA-seq data analysis and visualization tool",
