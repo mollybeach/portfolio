@@ -21,8 +21,8 @@ interface NavItem {
 const Sidebar: React.FC = () => {
   const navItems: NavItem[] = [
     { name: 'Overview', path: '/', icon: HomeIcon },
-    { name: 'Experience', path: '/experience', icon: BriefcaseIcon },
     { name: 'Projects', path: '/projects', icon: FolderIcon },
+    { name: 'Experience', path: '/experience', icon: BriefcaseIcon },
     { name: 'Education', path: '/education', icon: AcademicCapIcon },
     { name: 'Skills', path: '/skills', icon: WrenchIcon },
     { name: 'Certifications', path: '/certifications', icon: AcademicCapIcon },

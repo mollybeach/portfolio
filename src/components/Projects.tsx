@@ -39,14 +39,78 @@ interface Project {
     blockchain?: string[];
     uiLibraries?: string[];
     tools?: string[];
+    devTools?: string[];
   };
 }
 
 
 const projects: Project[] = [
   {
+    title: "TwinAI",
+    date: "Jan 2025-Present",
+    description: "TwinAI is an innovative platform that allows users to create AI-powered digital alter egos (Twins) based on social media activity. These AI agents can interact with users and perform various tasks, including trading tokens and engaging with followers.",
+    technologies: ["React", "Vite", "TypeScript", "Tailwind CSS", "Axios", "OpenAI", "Zustand"],
+    microlink: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1738080385/portfolio/twin-demo_xno51m.png",
+    link: "https://twin.vercel.app",
+    previewType: "image",
+    overview: "TwinAI aims to revolutionize the way users interact with social media through AI agents.",
+    keyFeatures: [
+      {
+        title: "Create Your Twin",
+        description: "Users can create a digital alter ego by registering their social media handle (e.g., Twitter/X). The platform verifies the handle's availability through the X API.",
+      },
+      {
+        title: "AI Learning",
+        description: "Each Twin learns from the original account's social media activity, adapting its personality and responses based on historical data.",
+      },
+      {
+        title: "Personality Customization",
+        description: "Users can define their Twin's personality traits, such as being aggressive or conservative, which influences its trading behavior and interactions.",
+      },
+      {
+        title: "Marketplace",
+        description: "Once created, Twins can be listed for sale in the marketplace, allowing users to buy shares in these AI agents.",
+      },
+      {
+        title: "Verification System",
+        description: "Twins can achieve verification status based on user investment, ensuring a level of trust in the AI's operations.",
+      },
+      {
+        title: "Cloning Feature",
+        description: "Users can fuse Twins to create new AI agents with combined traits, allowing for unique personality blends.",
+      },
+      {
+        title: "Leaderboard",
+        description: "The platform features a leaderboard to track the most valuable and active Twins, providing insights into engagement and market influence.",
+      },
+    ],
+    installation: {
+      steps: [
+        {
+          command: "npm install",
+          description: "Install the necessary dependencies.",
+        },
+        {
+          command: "npm start",
+          description: "Start the development server.",
+        },
+      ],
+    },
+    screenshots: [
+      { url: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1738080385/portfolio/twin-demo_xno51m.png", alt: "TwinAI App Preview" }
+    ],
+    status: "In Development",
+    techStack: {
+      frontend: ["React", "Vite", "TypeScript", "Tailwind CSS"],
+      backend: ["Express"],
+      networking: ["Axios"],
+      tools: ["OpenAI", "Zustand"],
+      devTools: ["ESLint", "PostCSS", "Autoprefixer"],
+    }
+  },
+  {
     title: "BRKT",
-    date: "Present", // Update with the actual date if available
+    date: "Jan 2025-Present",
     description: "A platform offering a variety of competitions, events, and opportunities to engage with the community and earn rewards.",
     technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Express", "Firebase", "GraphQL", "Ethers", "Aptos"],
     microlink: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1738100115/brkt_qjrjam.png", // Cloudinary link for the project
