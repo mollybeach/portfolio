@@ -22,9 +22,9 @@ const Sidebar: React.FC = () => {
   const navItems: NavItem[] = [
     { name: 'Overview', path: '/', icon: HomeIcon },
     { name: 'Experience', path: '/experience', icon: BriefcaseIcon },
-    { name: 'Skills', path: '/skills', icon: WrenchIcon },
     { name: 'Projects', path: '/projects', icon: FolderIcon },
     { name: 'Education', path: '/education', icon: AcademicCapIcon },
+    { name: 'Skills', path: '/skills', icon: WrenchIcon },
     { name: 'Certifications', path: '/certifications', icon: AcademicCapIcon },
   ];
 
@@ -95,7 +95,7 @@ const Sidebar: React.FC = () => {
               }`
             }
           >
-           {/*} <item.icon className="h-5 w-5" />*/}
+            {/*} <item.icon className="h-5 w-5" />*/}
             {item.name}
           </NavLink>
         ))}

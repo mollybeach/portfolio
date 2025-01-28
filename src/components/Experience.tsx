@@ -234,6 +234,7 @@ const Experience: React.FC = () => {
 
   return (
     <div className="space-y-8">
+      <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
       {experiences.map((exp, companyIndex) => (
         <div key={companyIndex} className="border rounded-lg p-4">
           <div className="flex items-center gap-4 mb-4">

@@ -89,11 +89,16 @@ const Overview: React.FC = () => {
         </p>
         
         <div className="flex flex-wrap gap-2">
+        <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">Javascript</span>
+        <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">React</span>
+        <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">TypeScript</span>
+        <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">Python</span>
+        <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">Solidity</span>
           <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">Blockchain</span>
-          <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">React</span>
-          <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">TypeScript</span>
-          <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">Solidity</span>
+          <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">AWS</span>
           <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">Web3</span>
+          <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">PostgreSQL</span>
+          <span className="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-700">Next.js</span>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">

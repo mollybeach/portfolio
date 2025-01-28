@@ -42,6 +42,39 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Rug Watch Dog",
+    date: "Jan 2025 - Present",
+    description: "An advanced AI-driven platform that helps investors analyze cryptocurrency tokens, especially meme coins, to detect potential 'rug pulls'.",
+    technologies: ["Next.js 14", "Tailwind CSS", "Radix UI", "Node.js 20", "EdgeDB"],
+    microlink: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1736885394/rug-watch-dog_r8dx8l.png", // Updated with the new Cloudinary link
+    link: "https://rugwatchdog.vercel.app/",
+    previewType: "image",
+    overview: "AI-driven platform for analyzing meme coins.",
+    keyFeatures: [
+      { title: "AI Risk Analysis", description: "Automatically analyze meme coins for risks." },
+      { title: "Blockchain Data Fetching", description: "Fetch real-time token and transaction data." },
+      { title: "Chatbot Integration", description: "Interact with a conversational AI assistant." },
+      { title: "FUD Alerts", description: "Generate alerts for high-risk tokens." },
+      { title: "Customizable AI Models", description: "Train AI to detect emerging fraud patterns." }
+    ],
+    installation: {
+      steps: [
+        { command: "pnpm install", description: "Install project dependencies" },
+        { command: "pnpm dev", description: "Start the development server" }
+      ]
+    },
+    screenshots: [
+      { url: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1731722300/portfolio/rugwatchdog-preview.png", alt: "Rug Watch Dog App Preview" }
+    ],
+    status: "In Development", // Update with the actual status if available
+    techStack: {
+      frontend: ["Next.js 14", "Tailwind CSS", "Radix UI"],
+      backend: ["Node.js 20", "EdgeDB"],
+      deployment: ["Vercel"],
+      tools: ["Machine Learning", "Chatbot Integration"]
+    }
+  },
+  {
     title: "RNAlytics",
     date: "Nov 2024 - Present",
     description: "An in-depth analysis of RNA-seq data comparing the effects of Cyclosporin A (CsA) and Voclosporin (VOC) treatments against control groups. Utilizes iPathwayGuide to highlight differentially expressed genes (DEGs), pathway impacts, and biological processes affected by these treatments.",
@@ -318,19 +351,22 @@ const projects: Project[] = [
       deployment: ["iOS"],
       tools: ["Xcode", "Swift"]
     }
-  },
+  }
 ];
 
 const Projects: React.FC = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-      {projects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          project={project}
-        />
-      ))}
-    </div>
+    <section className="space-y-6">
+      <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            project={project}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 

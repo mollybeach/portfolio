@@ -44,8 +44,7 @@ const skills = {
 const Skills: React.FC = () => {
   return (
     <section className="space-y-6 p-8">
-      <h2 className="text-3xl font-semibold text-gray-900">Skills</h2>
-      
+      <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
       {Object.entries(skills).map(([category, items]) => (
         <div key={category} className="space-y-2">
           <h3 className="text-xl font-medium text-gray-800 capitalize">

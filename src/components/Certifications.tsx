@@ -1,6 +1,4 @@
 // path: src/components/Certifications.tsx
-import React, { useState } from 'react';
-
 interface Certification {
     title: string;
     issuer: string;
@@ -127,26 +125,29 @@ const certifications: Certification[] = [
 
 export default function Certifications() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {certifications.map((cert, index) => (
-        <div key={index} className="bg-white rounded-lg shadow-md p-4 flex flex-col">
-          <div className="h-12 w-12 relative mb-3">
-          <img 
-              src={cert.logo}
-              alt={`${cert.issuer} logo`}
-              className="w-16 h-16 object-contain rounded-lg"
-            />
+    <section className="space-y-6">
+      <h2 className="text-3xl font-bold mb-8 text-center">Certifications</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {certifications.map((cert, index) => (
+          <div key={index} className="bg-white rounded-lg shadow-md p-4 flex flex-col">
+            <div className="h-12 w-12 relative mb-3">
+            <img 
+                src={cert.logo}
+                alt={`${cert.issuer} logo`}
+                className="w-16 h-16 object-contain rounded-lg"
+              />
+            </div>
+            <h3 className="font-semibold text-lg mb-2">{cert.title}</h3>
+            <div className="text-gray-600">
+              <p>{cert.issuer}</p>
+              <p>Issued {cert.issueDate}</p>
+              {cert.credentialId && (
+                <p className="text-sm">Credential ID: {cert.credentialId}</p>
+              )}
+            </div>
           </div>
-          <h3 className="font-semibold text-lg mb-2">{cert.title}</h3>
-          <div className="text-gray-600">
-            <p>{cert.issuer}</p>
-            <p>Issued {cert.issueDate}</p>
-            {cert.credentialId && (
-              <p className="text-sm">Credential ID: {cert.credentialId}</p>
-            )}
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 }
