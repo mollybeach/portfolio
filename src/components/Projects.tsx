@@ -35,12 +35,50 @@ interface Project {
     frontend?: string[];
     backend?: string[];
     deployment?: string[];
+    networking?: string[];
+    blockchain?: string[];
+    uiLibraries?: string[];
     tools?: string[];
   };
 }
 
 
 const projects: Project[] = [
+  {
+    title: "BRKT",
+    date: "Present", // Update with the actual date if available
+    description: "A platform offering a variety of competitions, events, and opportunities to engage with the community and earn rewards.",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Express", "Firebase", "GraphQL", "Ethers", "Aptos"],
+    microlink: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1738100115/brkt_qjrjam.png", // Cloudinary link for the project
+    link: "https://www.brkt.gg/",
+    previewType: "image",
+    overview: "Engage in competitions and events to earn rewards.",
+    keyFeatures: [
+      { title: "Competitions", description: "Participate in various competitions and earn rewards." },
+      { title: "Live Events", description: "Engage in live events like the AVS Showdown." },
+      { title: "Rewards System", description: "Unlock rewards through activities and raffles." },
+      { title: "Cat Society", description: "An interactive space to meet partners and explore unique content." },
+      { title: "Leaderboard", description: "Track your performance and compete for top spots." }
+    ],
+    installation: {
+      steps: [
+        { command: "npm install --legacy-peer-deps", description: "Install project dependencies" },
+        { command: "npm run dev", description: "Start the development server" }
+      ]
+    },
+    screenshots: [
+      { url: "https://res.cloudinary.com/storagemanagementcontainer/image/upload/v1738100115/brkt_qjrjam.png", alt: "BRKT App Preview" }
+    ],
+    status: "In Development", // Update with the actual status if available
+    techStack: {
+      frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      backend: ["Express", "Firebase"],
+      networking: ["Axios", "GraphQL"],
+      blockchain: ["Ethers", "Aptos"],
+      uiLibraries: ["@mui/material", "@emotion/react", "@emotion/styled", "@nextui-org/react", "@radix-ui/react-components"],
+      tools: ["ESLint", "PostCSS", "Autoprefixer", "Zustand", "React Query", "React Beautiful DnD", "React Router"]
+    }
+  },
   {
     title: "Rug Watch Dog",
     date: "Jan 2025 - Present",
